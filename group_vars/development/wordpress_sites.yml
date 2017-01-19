@@ -1,0 +1,68 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  cedreo-interactive.com:
+    site_hosts:
+      - canonical: cedreo-interactive.com.dev
+      - canonical: cedreo-interactive.fr.dev
+    local_path: ../cedreo-interactive # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_user: wadmin
+    admin_email: wab2com@gmail.com
+    site_install: false
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+
+  cedar-architect.com:
+    site_hosts:
+      - canonical: cedar-architect.com.dev
+      - canonical: cedar-architect.fr.dev
+    local_path: ../cedar-architect # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_user: wadmin
+    admin_email: wab2com@gmail.com
+    site_install: false
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+
+  cedreo-homeplanner.com:
+    site_hosts:
+      - canonical: cedreo-homeplanner.com.dev
+      - canonical: cedreo-homeplanner.fr.dev
+    local_path: ../cedreo-homeplanner # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_user: wadmin
+    admin_email: wab2com@gmail.com
+    site_install: false
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+
+  cedreo-studio.com:
+    site_hosts:
+      - canonical: cedreo-studio.com.dev
+      - canonical: cedreo-studio.fr.dev
+    local_path: ../cedreo-studio # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_user: wadmin
+    admin_email: wab2com@gmail.com
+    site_install: false
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
