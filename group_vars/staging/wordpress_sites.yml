@@ -3,19 +3,70 @@
 # Define accompanying passwords/secrets in group_vars/staging/vault.yml
 
 wordpress_sites:
-  example.com:
+  cedreo-interactive.com:
     site_hosts:
-      - canonical: staging.example.com
+      - canonical: cedreo-interactive.wabdesign.fr
         # redirects:
         #   - otherdomain.com
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
-    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
-    branch: master
+    local_path: ../cedreo-interactive # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:wab/c-ntrctv.git # replace with your Git repo URL
+    #repo_subtree_path:  # relative path to your Bedrock/WP directory in your repo
+    branch: develop
     multisite:
       enabled: false
     ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
       enabled: false
+
+  cedar-architect.com:
+    site_hosts:
+      - canonical: cedar-architect.wabdesign.fr
+        # redirects:
+        #   - otherdomain.com
+    local_path: ../cedar-architect # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:wab/c-rchtct.git # replace with your Git repo URL
+    #repo_subtree_path:  # relative path to your Bedrock/WP directory in your repo
+    branch: develop
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false
+
+  cedreo-homeplanner.com:
+    site_hosts:
+      - canonical: cedreo-homeplanner.wabdesign.fr
+        # redirects:
+        #   - otherdomain.com
+    local_path: ../cedreo-homeplanner # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:wab/c-hmplnnr.git # replace with your Git repo URL
+    #repo_subtree_path:  # relative path to your Bedrock/WP directory in your repo
+    branch: develop
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: false
+
+  cedreo-studio.com:
+    site_hosts:
+      - canonical: cedreo-studio.wabdesign.fr
+        # redirects:
+        #   - otherdomain.com
+    local_path: ../cedreo-studio # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:wab/c-std.git # replace with your Git repo URL
+    #repo_subtree_path:  # relative path to your Bedrock/WP directory in your repo
+    branch: develop
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
       provider: letsencrypt
     cache:
       enabled: false
