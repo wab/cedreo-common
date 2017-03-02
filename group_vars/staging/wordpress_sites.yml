@@ -18,11 +18,12 @@ wordpress_sites:
       enabled: true
       provider: letsencrypt
     cache:
-      enabled: false
+      enabled: true
 
   cedar-architect.com:
     site_hosts:
       - canonical: cedar-architect.wabdesign.fr
+      - canonical: cedar-architect-fr.wabdesign.fr
         # redirects:
         #   - otherdomain.com
     local_path: ../cedar-architect # path targeting local Bedrock site directory (relative to Ansible root)
@@ -34,8 +35,9 @@ wordpress_sites:
     ssl:
       enabled: true
       provider: letsencrypt
+      hsts_include_subdomains: false
     cache:
-      enabled: false
+      enabled: true
 
   cedreo-homeplanner.com:
     site_hosts:
@@ -52,14 +54,14 @@ wordpress_sites:
       enabled: true
       provider: letsencrypt
     cache:
-      enabled: false
+      enabled: true
 
-  cedreo-studio.com:
+  cedar-studio.com:
     site_hosts:
-      - canonical: cedreo-studio.wabdesign.fr
+      - canonical: cedar-studio.wabdesign.fr
         # redirects:
         #   - otherdomain.com
-    local_path: ../cedreo-studio # path targeting local Bedrock site directory (relative to Ansible root)
+    local_path: ../cedar-studio # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:wab/c-std.git # replace with your Git repo URL
     #repo_subtree_path:  # relative path to your Bedrock/WP directory in your repo
     branch: develop
@@ -69,4 +71,4 @@ wordpress_sites:
       enabled: true
       provider: letsencrypt
     cache:
-      enabled: false
+      enabled: true
