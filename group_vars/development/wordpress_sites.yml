@@ -51,10 +51,9 @@ wordpress_sites:
     cache:
       enabled: false
 
-  cedar-studio.com:
+  cedar-studio.fr:
     site_hosts:
-      - canonical: cedar-studio.com.dev
-      - canonical: cedar-studio.fr.dev
+      - canonical: cedar-studio.dev
     local_path: ../cedar-studio # path targeting local Bedrock site directory (relative to Ansible root)
     admin_user: wadmin
     admin_email: wab2com@gmail.com

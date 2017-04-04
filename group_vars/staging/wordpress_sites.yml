@@ -33,11 +33,11 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: true
+      enabled: false
       provider: letsencrypt
       hsts_include_subdomains: false
     cache:
-      enabled: true
+      enabled: false
 
   cedreo-homeplanner.com:
     site_hosts:
@@ -56,7 +56,7 @@ wordpress_sites:
     cache:
       enabled: true
 
-  cedar-studio.com:
+  cedar-studio.fr:
     site_hosts:
       - canonical: cedar-studio.wabdesign.fr
         # redirects:
@@ -68,7 +68,7 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: true
+      enabled: false
       provider: letsencrypt
     cache:
-      enabled: true
+      enabled: false

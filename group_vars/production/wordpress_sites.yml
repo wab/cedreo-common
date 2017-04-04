@@ -68,11 +68,11 @@ wordpress_sites:
     cache:
       enabled: true
 
-  cedar-studio.com:
+  cedar-studio.fr:
     site_hosts:
-      - canonical: cedar-studio.com
+      - canonical: cedar-studio.fr
         redirects:
-          - wwwcedar-studio.com
+          - www.cedar-studio.fr
     local_path: ../cedar-studio # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:wab/c-std.git # replace with your Git repo URL
     #repo_subtree_path:  # relative path to your Bedrock/WP directory in your repo
